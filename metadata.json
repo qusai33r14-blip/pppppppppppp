@@ -1,0 +1,6 @@
+{
+  "name": "لعبة المافيا — إصدار الهاتف الواحد",
+  "description": "لعبة المافيا الاحترافية على هاتف واحد يتناقله اللاعبون، مع كشف سرّي للأدوار وكروت ثلاثية الأبعاد وحفظ محلي للأسماء والجولات.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
