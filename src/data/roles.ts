@@ -5,7 +5,15 @@
 
 import { RoleDefinition, RoleId, RoleCounts } from '../types/mafia';
 
-export const CREST_IMAGE = '/src/assets/images/mafia_game_crest_1793030253584.jpg';
+import crestImg from '../assets/images/mafia_game_crest_1793030253584.jpg';
+import citizenImg from '../assets/images/role_citizen_1793030256562.jpg';
+import silencerImg from '../assets/images/role_mafia_silencer_1793030254095.jpg';
+import assassinImg from '../assets/images/role_mafia_assassin_1793030253847.jpg';
+import mobsterImg from '../assets/images/role_regular_mafia_1793030273240.jpg';
+import doctorImg from '../assets/images/role_doctor_1793030255570.jpg';
+import detectiveImg from '../assets/images/role_detective_1793030256947.jpg';
+
+export const CREST_IMAGE = crestImg;
 
 export const ROLES: Record<RoleId, RoleDefinition> = {
   citizen: {
@@ -17,7 +25,7 @@ export const ROLES: Record<RoleId, RoleDefinition> = {
     sideName: 'حلف المدينة الصالحة',
     accentColor: '#38bdf8', // Sky/Sapphire blue
     glowColor: 'rgba(56, 189, 248, 0.4)',
-    image: '/src/assets/images/role_citizen_1793030256562.jpg',
+    image: citizenImg,
     shortDesc: 'مواطن بريء يعتمد على الفراسة والتصويت الجماعي لطرد المافيا.',
     fullDesc: 'أنت مواطن شريف ونزيه في المدينة. ليس لديك صلاحيات ليلية سرية، لكن صوتك في محكمة المدينة بالنهار هو سلاحك الأقوى لكشف وتصفية عناصر المافيا.',
     nightActionDesc: 'تنام نوماً عميقاً مع أهل المدينة، ولا تفتح عينيك أبداً في الليل.',
@@ -32,7 +40,7 @@ export const ROLES: Record<RoleId, RoleDefinition> = {
     sideName: 'عصابة المافيا',
     accentColor: '#a855f7', // Royal purple/violet
     glowColor: 'rgba(168, 85, 247, 0.45)',
-    image: '/src/assets/images/role_mafia_silencer_1793030254095.jpg',
+    image: silencerImg,
     shortDesc: 'عضو خبيث يخرس أحد اللاعبين ويمنعه تماماً من الحديث في اليوم التالي.',
     fullDesc: 'تشارك العصابة قراراتها الخبيثة، وتملك قدرة التسكيت الفريدة: كل ليلة تختار لاعباً لتمنعه من النطق طوال النهار التالي! يمكن للضحية الإشارة أو التصويت فقط دون أي كلام.',
     nightActionDesc: 'تستيقظ مع المافيا، ثم يستدعيك المشرف منفرداً لتشير بإصبعك إلى الشخص الذي تريد كتم صوته لليوم التالي.',
@@ -47,7 +55,7 @@ export const ROLES: Record<RoleId, RoleDefinition> = {
     sideName: 'عصابة المافيا (الزعيم)',
     accentColor: '#ef4444', // Blood crimson
     glowColor: 'rgba(239, 68, 68, 0.5)',
-    image: '/src/assets/images/role_mafia_assassin_1793030253847.jpg',
+    image: assassinImg,
     shortDesc: 'زعيم المافيا والكلمة الفاصلة في تصفية الضحايا ليلاً.',
     fullDesc: 'أنت العقل المدبر لعمليات الاغتيال في العصابة. إذا اختلف أفراد المافيا على الهدف ليلاً، فإشارتك أنت هي القرار الحاسم لتحديد من يموت قبل بزوغ الفجر.',
     nightActionDesc: 'تستيقظ مع أعضاء عصابتك ليلاً وتتفقون بالإشارة الصامتة على ضحية الاغتيال.',
@@ -62,7 +70,7 @@ export const ROLES: Record<RoleId, RoleDefinition> = {
     sideName: 'عصابة المافيا',
     accentColor: '#f43f5e', // Rose crimson
     glowColor: 'rgba(244, 63, 94, 0.4)',
-    image: '/src/assets/images/role_regular_mafia_1793030273240.jpg',
+    image: mobsterImg,
     shortDesc: 'عضو محترف في العصابة يشارك في اختيار الضحايا والتضليل.',
     fullDesc: 'عنصر قتالي بارع في صفوف المافيا. مهمتك مساعدة رفاقك في تصفية مواطني المدينة ليلاً، وتوجيه أصابع الاتهام زوراً نحو الأبرياء نهاراً.',
     nightActionDesc: 'تستيقظ مع أعضاء المافيا بالإشارة الصامتة للاتفاق على تصفية أحد لاعبي المدينة.',
@@ -76,8 +84,8 @@ export const ROLES: Record<RoleId, RoleDefinition> = {
     side: 'CIVILIAN',
     sideName: 'حلف المدينة الصالحة',
     accentColor: '#10b981', // Emerald green
-    glowColor: 'rgba(16, 185, 129, 0.45)',
-    image: '/src/assets/images/role_doctor_1793030255570.jpg',
+    glowColor: 'rgba(168, 185, 129, 0.45)',
+    image: doctorImg,
     shortDesc: 'حامي الأرواح، يختار لاعباً كل ليلة لإسعافه وإنقاذه من الاغتيال.',
     fullDesc: 'ملاك الرحمة في شوارع المدينة المظلمة. كل ليلة تستيقظ سراً وتختار لاعباً واحداً لإسعافه. إذا حاولت المافيا اغتياله في تلك الليلة، ينجو ويعلن المشرف صباحاً أنه لم يمت أحد!',
     nightActionDesc: 'تستيقظ عندما يناديك المشرف وتختار لاعباً واحداً لحمايته من الاغتيال لتلك الليلة.',
@@ -92,7 +100,7 @@ export const ROLES: Record<RoleId, RoleDefinition> = {
     sideName: 'حلف المدينة الصالحة',
     accentColor: '#f59e0b', // Amber gold
     glowColor: 'rgba(245, 158, 11, 0.45)',
-    image: '/src/assets/images/role_detective_1793030256947.jpg',
+    image: detectiveImg,
     shortDesc: 'عين القانون الساهرة، يستجوب مشتبهاً به كل ليلة ليكتشف هويته.',
     fullDesc: 'المحقق الذكي الذي يلاحق خيوط الجريمة. كل ليلة تستيقظ وتشير للمشرف إلى لاعب واحد، فيجيبك المشرف بإشارة متفق عليها (إبهام لأعلى = مافيا، إبهام لأسفل = مواطن بريء).',
     nightActionDesc: 'تستيقظ ليلاً وتسأل المشرف بالإشارة عن هوية لاعب واحد لتكتشف هل هو مافيا أم صالح.',
